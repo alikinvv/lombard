@@ -55,17 +55,24 @@ $('body').on('click', '.back', () => {
     $('.mobile').removeAttr('class').addClass('mobile');
 });
 
+let closeModal = () => {
+    if (!$('.modal.active').is('[data-modal="pay"]')) {
+        $('.modals').removeClass('active').attr('data-open', '');
+        $('.modal').removeClass('active');
+        $('html, body').removeClass('overflow');
+    } else {
+        $('.modal').removeClass('active');
+        $('.modal[data-modal="contract"]').addClass('active');
+    }
+}
+
 $('body').on('click', '.modal__close', (e) => {
-    $('.modals').removeClass('active').attr('data-open', '');
-    $('.modal').removeClass('active');
-    $('html, body').removeClass('overflow');
+    closeModal();
 });
 
 $('body').on('click', '.modals', (e) => {
     if ($(e.target).is('.modals')) {
-        $('.modals').removeClass('active').attr('data-open', '');
-        $('.modal').removeClass('active');
-        $('html, body').removeClass('overflow');
+        closeModal();
     }
 });
 
