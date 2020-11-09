@@ -1,0 +1,201 @@
+<div class="modals">
+    <div class="modal" data-modal="contract">
+        <div class="modal__close"></div>
+        <div class="modal__title">Договор № A3 000-715 от 31.10.2020</div>
+
+        <div class="list">
+            <div class="row">
+                <div>Залоговое имущество</div>
+                <div></div>
+            </div>
+            <div class="row">
+                <div>Изделие 1</div>
+                <div>Кольцо</div>
+            </div>
+            <div class="row">
+                <div>Изделие 2</div>
+                <div>Цепочка</div>
+            </div>
+            <div class="row">
+                <div>Изделие 3</div>
+                <div>Браслет</div>
+            </div>
+            <div class="row">
+                <div>Изделие 4</div>
+                <div>Серьги</div>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="row">
+                <div>Сумма займа</div>
+                <div>1 000 000 ₽</div>
+            </div>
+            <div class="row">
+                <div>Общий долг</div>
+                <div>1 200 000 ₽</div>
+            </div>
+            <div class="row">
+                <div>Ставка по договору</div>
+                <div>0,33 %</div>
+            </div>
+            <div class="row">
+                <div>Начислено рублей / за период</div>
+                <div>1 200 000 ₽ / 31 день</div>
+            </div>
+            <div class="row">
+                <div>Дата предыдущей оплаты</div>
+                <div>31.11.2020</div>
+            </div>
+            <div class="row">
+                <div>Сумма предыдущей оплаты</div>
+                <div>100 000 ₽</div>
+            </div>
+            <div class="row">
+                <div>Повышенная ставка</div>
+                <div>0,39 %</div>
+            </div>
+            <div class="row">
+                <div>Дата очередного платежа</div>
+                <div>31.12.2020</div>
+            </div>
+            <div class="row">
+                <div>Сумма очередного платежа</div>
+                <div>100 000 ₽</div>
+            </div>
+        </div>
+
+        <div class="notification">
+            <div class="notification__col">
+                <div class="notification__item">
+                    <div>Статус программы <br> лояльности</div>
+                    <div>Христофор <br> Колумб</div>
+                </div>
+                <div class="notification__item">
+                    <div>До очередной даты <br> платежа осталось</div>
+                    <div><span class="red">3 дня</span></div>
+                </div>
+            </div>
+            <div class="notification__col">
+                <div class="notification__row">
+                    <div class="notification__item">
+                        <div>Начислено</div>
+                        <span class="blue">1000</span>
+                        <div>бонусов</div>
+                    </div>
+                    <div class="notification__item">
+                        <div>Заморожено</div>
+                        <span class="red">300</span>
+                        <div>бонусов</div>
+                    </div>
+                    <div class="notification__item">
+                        <div>Доступно</div>
+                        <span class="green">700</span>
+                        <div>бонусов</div>
+                    </div>
+                </div>
+                <div class="notification__item">
+                    <div>Не использованные бонусы при <br> погашении кредита сгорают!</div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a href="javascript:void(0)" data-modal="pay" class="btn">Оплатить</a>
+        </div>
+    </div>
+
+
+    <div class="modal" data-modal="pay">
+        <div class="modal__close"></div>
+        <div class="modal__title">Оплата по договору <br> № A3 000-715 от 31.10.2020</div>
+
+        <form action="">
+            <div class="form-group">
+                <span>Сумма платежа:</span>
+                <input id="slider-range-value" type="text" value="100000">
+                <div id="slider-range"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="bonus-checkbox">
+                <label for="bonus-checkbox">Оплатить бонусами</label>
+            </div>
+
+            <div class="hidden">
+                <div class="form-group error">
+                    <span>Укажите сумму оплаты бонусами:</span>
+                    <input id="bonus-value" type="text" value="100000">
+                    <span class="error-text">Бонусами оплатить можно не более 25%  суммы чека</span>
+                    <div id="bonus"></div>
+                </div>
+
+                <div class="notification">
+                    <div class="notification__col">
+                        <div class="notification__row">
+                            <div class="notification__item">
+                                <div>Начислено</div>
+                                <span class="blue">1000</span>
+                                <div>бонусов</div>
+                            </div>
+                            <div class="notification__item">
+                                <div>Заморожено</div>
+                                <span class="red">300</span>
+                                <div>бонусов</div>
+                            </div>
+                            <div class="notification__item">
+                                <div>Доступно</div>
+                                <span class="green">700</span>
+                                <div>бонусов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price">
+                    Итого к оплате рублями:
+                    <span>99 300 ₽</span>
+                </div>
+            </div>
+
+            <button class="btn">Оплатить</button>
+        </form>
+    </div>
+
+    <div class="modal center" data-modal="enter">
+        <div class="modal__close"></div>
+        <div class="modal__title">Войти в личный кабинет</div>
+
+        <form action="">
+            <input type="text" name="phone">
+
+            <p>Подтвердите, что вы не робот</p>
+            <img src="img/captcha.png" alt="">
+
+            <a href="javascript:void(0)" class="btn" data-modal="code">Войти</a>
+        </form>
+    </div>
+
+    <div class="modal center" data-modal="code">
+        <div class="modal__close"></div>
+        <div class="modal__title">Введите код подтверждения</div>
+
+        <p>Мы отправили вам код в смс</p>
+
+        <form action="">
+            <input type="text" name="code">
+            <p>Не приходит код? <a href="javascript:void(0)">Отправьте еще один</a></p>
+        </form>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
